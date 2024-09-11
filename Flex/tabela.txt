@@ -1,8 +1,0 @@
-Numero  -> Aceita
-Rejeita Rejeita Rejeita  -> Rejeita
-Rejeita  -> Rejeita
-Soma  -> Aceita
-Numero  -> Aceita
-Rejeita Numero  -> Rejeita
-Soma Rejeita  -> Rejeita
-Numero Rejeita Rejeita Rejeita 
