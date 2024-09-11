@@ -1,0 +1,32 @@
+# Ignora arquivos gerados pelo Flex e GCC
+lex.yy.c
+*.o
+*.out
+*.exe
+*.obj
+analisador
+*.yy.c
+*.tab.c
+*.tab.h
+
+# Ignora arquivos de saída e temporários
+tabela.txt
+entrada.txt
+*.log
+*.tmp
+*.bak
+
+# Ignora arquivos de backup do editor
+*~
+.*.swp
+.*.swo
+
+# Ignora diretórios temporários
+/build/
+/dist/
+/tmp/
+/debug/
+
+# Ignora arquivos e pastas do sistema operacional
+.DS_Store
+Thumbs.db

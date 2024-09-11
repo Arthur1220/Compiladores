@@ -1,11 +1,8 @@
-NÚMERO NATURAL
-IDENTIFICADOR
-COMANDO DE ATRIBUIÇÃO
-OPERADOR SOMA
-ERRO
-IDENTIFICADOR
-NÚMERO NATURAL
-OPERADOR SOMA
-COMANDO DE ATRIBUIÇÃO
-NÚMERO NATURAL
-IDENTIFICADOR
+Numero  -> Aceita
+Rejeita Rejeita Rejeita  -> Rejeita
+Rejeita  -> Rejeita
+Soma  -> Aceita
+Numero  -> Aceita
+Rejeita Numero  -> Rejeita
+Soma Rejeita  -> Rejeita
+Numero Rejeita Rejeita Rejeita 
