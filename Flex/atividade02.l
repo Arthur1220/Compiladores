@@ -10,7 +10,8 @@
 [=] printf("Atribuicao ");
 [+] printf("Operador de soma ");
 %%
+
 int main() {
-var = yylex();
-return(0);
+    var = yylex();
+    return(0);
 }
