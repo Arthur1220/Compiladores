@@ -19,7 +19,7 @@ Na pasta `/flex`, há um script chamado **`run_flex.sh`**. Esse script foi criad
    Para executar o script, você precisa navegar até a pasta `flex` no terminal. Use o seguinte comando:
 
    ```bash
-   cd flex
+   cd Flex
    ```
 
 2. **Alterar o Nome do Arquivo Flex no Script**:

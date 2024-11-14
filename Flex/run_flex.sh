@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Nome do arquivo Flex (sem a extensão .l)
-FILENAME="expre_mat2"
+FILENAME="teste"
 
 # 1. Gerar o código C a partir do arquivo Flex
 flex "$FILENAME.l"

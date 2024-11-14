@@ -351,8 +351,8 @@ static void yynoreturn yy_fatal_error ( const char* msg  );
 	(yy_hold_char) = *yy_cp; \
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
-#define YY_NUM_RULES 9
-#define YY_END_OF_BUFFER 10
+#define YY_NUM_RULES 5
+#define YY_END_OF_BUFFER 6
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -360,28 +360,28 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static const flex_int16_t yy_accept[14] =
+static const flex_int16_t yy_accept[12] =
     {   0,
-        0,    0,   10,    8,    7,    6,    4,    5,    2,    3,
-        1,    1,    0
+        0,    0,    6,    4,    5,    1,    2,    3,    1,    3,
+        0
     } ;
 
 static const YY_CHAR yy_ec[256] =
     {   0,
-        1,    1,    1,    1,    1,    1,    1,    1,    2,    3,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    2,    1,    1,    1,    1,    1,    1,    1,    4,
-        5,    1,    6,    1,    7,    1,    1,    8,    8,    8,
-        8,    8,    8,    8,    8,    8,    8,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    2,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    3,    3,    3,
+        3,    3,    3,    3,    3,    3,    3,    1,    1,    1,
+        4,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    5,    5,    5,    5,
 
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        5,    5,    5,    5,    5,    5,    5,    5,    5,    5,
+        5,    5,    5,    5,    5,    5,    5,    5,    5,    5,
+        5,    5,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -398,33 +398,33 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static const YY_CHAR yy_meta[9] =
+static const YY_CHAR yy_meta[6] =
     {   0,
-        1,    1,    1,    1,    1,    1,    1,    1
+        1,    1,    2,    1,    3
     } ;
 
 static const flex_int16_t yy_base[14] =
     {   0,
-        0,    0,   11,   12,   12,   12,   12,   12,   12,   12,
-        2,    1,   12
+        0,    0,    8,    9,    9,    0,    9,    0,    0,    0,
+        9,    5,    3
     } ;
 
 static const flex_int16_t yy_def[14] =
     {   0,
-       13,    1,   13,   13,   13,   13,   13,   13,   13,   13,
-       13,   13,    0
+       11,    1,   11,   11,   11,   12,   11,   13,   12,   13,
+        0,   11,   11
     } ;
 
-static const flex_int16_t yy_nxt[21] =
+static const flex_int16_t yy_nxt[15] =
     {   0,
-        4,    5,    6,    7,    8,    9,   10,   11,   12,   12,
-       13,    3,   13,   13,   13,   13,   13,   13,   13,   13
+        4,    5,    6,    7,    8,   10,    9,   11,    3,   11,
+       11,   11,   11,   11
     } ;
 
-static const flex_int16_t yy_chk[21] =
+static const flex_int16_t yy_chk[15] =
     {   0,
-        1,    1,    1,    1,    1,    1,    1,    1,   12,   11,
-        3,   13,   13,   13,   13,   13,   13,   13,   13,   13
+        1,    1,    1,    1,    1,   13,   12,    3,   11,   11,
+       11,   11,   11,   11
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -441,20 +441,11 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "expre_mat2.l"
-#line 2 "expre_mat2.l"
+#line 1 "teste.l"
+#line 2 "teste.l"
 #include <stdio.h>
-#include <stdlib.h>
-
-FILE *entrada;
-FILE *saida;
-
-int abre_par = 0;  // Contador de parênteses abertos
-int fecha_par = 0;  // Contador de parênteses fechados
-int operadores = 0; // Contador de operadores matemáticos
-int aceito = 1;     // Variável para verificar se a cadeia é aceita
-#line 457 "lex.yy.c"
-#line 458 "lex.yy.c"
+#line 448 "lex.yy.c"
+#line 449 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -671,9 +662,9 @@ YY_DECL
 		}
 
 	{
-#line 14 "expre_mat2.l"
+#line 5 "teste.l"
 
-#line 677 "lex.yy.c"
+#line 668 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -700,13 +691,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 14 )
+				if ( yy_current_state >= 12 )
 					yy_c = yy_meta[yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 12 );
+		while ( yy_base[yy_current_state] != 9 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -732,89 +723,30 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 15 "expre_mat2.l"
-{ 
-    fprintf(saida, "Numero "); 
-}
+#line 6 "teste.l"
+{ printf("Número real sem sinal: %s\n", yytext); } 
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 18 "expre_mat2.l"
-{ 
-    operadores++; 
-    fprintf(saida, "Soma "); 
-    if (operadores > 2) aceito = 0;  // Mais de dois operadores
-}
+#line 7 "teste.l"
+{ printf("Operador de atribuição: %s\n", yytext); }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 23 "expre_mat2.l"
-{ 
-    operadores++; 
-    fprintf(saida, "Subtração "); 
-    if (operadores > 2) aceito = 0;  // Mais de dois operadores
-}
+#line 8 "teste.l"
+{ printf("Identificador: %s\n", yytext); }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 28 "expre_mat2.l"
-{ 
-    abre_par++; 
-    fprintf(saida, "Abre_parenteses "); 
-}
+#line 9 "teste.l"
+{ printf("Erro: caractere inválido: %s\n", yytext); } 
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 32 "expre_mat2.l"
-{ 
-    fecha_par++; 
-    fprintf(saida, "Fecha_parenteses "); 
-    if (fecha_par > abre_par) aceito = 0;  // Fechou mais parênteses do que abriu
-}
-	YY_BREAK
-case 6:
-/* rule 6 can match eol */
-YY_RULE_SETUP
-#line 37 "expre_mat2.l"
-{ 
-    // Verificar se a linha é aceita: parênteses balanceados e no máximo 2 operadores
-    if (abre_par != fecha_par || operadores > 2) aceito = 0;
-    
-    if (aceito) {
-        fprintf(saida, " -> Aceita\n");  // Linha aceita
-    } else {
-        fprintf(saida, " -> Rejeita\n");  // Linha rejeitada
-    }
-    
-    // Resetar contadores para a próxima linha
-    abre_par = 0;
-    fecha_par = 0;
-    operadores = 0;
-    aceito = 1;
-}
-	YY_BREAK
-case 7:
-YY_RULE_SETUP
-#line 53 "expre_mat2.l"
-;  // Ignora espaços e tabulações
-	YY_BREAK
-case 8:
-YY_RULE_SETUP
-#line 54 "expre_mat2.l"
-{ 
-    // Rejeitar caracteres não reconhecidos, exceto espaços e quebras de linha
-    if (yytext[0] != '\n') {  // Ignora quebra de linha
-        fprintf(saida, "Rejeita "); 
-        aceito = 0;  // Qualquer caractere não reconhecido faz a linha ser rejeitada
-    }
-}
-	YY_BREAK
-case 9:
-YY_RULE_SETUP
-#line 61 "expre_mat2.l"
+#line 10 "teste.l"
 ECHO;
 	YY_BREAK
-#line 818 "lex.yy.c"
+#line 750 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1111,7 +1043,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 14 )
+			if ( yy_current_state >= 12 )
 				yy_c = yy_meta[yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
@@ -1139,11 +1071,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 14 )
+		if ( yy_current_state >= 12 )
 			yy_c = yy_meta[yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
-	yy_is_jam = (yy_current_state == 13);
+	yy_is_jam = (yy_current_state == 11);
 
 		return yy_is_jam ? 0 : yy_current_state;
 }
@@ -1819,29 +1751,10 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 61 "expre_mat2.l"
+#line 10 "teste.l"
 
 
 int main() {
-    entrada = fopen("entrada.txt", "r");
-    if (!entrada) {
-        perror("Erro ao abrir o arquivo de entrada");
-        exit(1);
-    }
-
-    saida = fopen("tabela.txt", "w");
-    if (!saida) {
-        perror("Erro ao abrir o arquivo de saída");
-        fclose(entrada);
-        exit(1);
-    }
-
-    yyin = entrada;
     yylex();
-
-    fclose(entrada);
-    fclose(saida);
-
     return 0;
 }
-
