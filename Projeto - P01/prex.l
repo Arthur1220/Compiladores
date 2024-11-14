@@ -63,7 +63,7 @@
 
 [A-Za-z][A-Za-z0-9]+     { printf("Token: %d, Lexema: %s\n", T_IDENTIFICADOR, yytext); }
 
-[-+]?[0-9]+,[0-9]+       { printf("Token: %d, Lexema: %s\n", T_NUMERO_FLOAT, yytext); }
+[-+]?[0-9]+,[0-9]{1,2}   { printf("Token: %d, Lexema: %s\n", T_NUMERO_FLOAT, yytext); }
 
 '.'                      { printf("Token: %d, Lexema: %s\n", T_CARACTERE, yytext); }
 
