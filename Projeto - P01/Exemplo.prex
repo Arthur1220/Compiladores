@@ -16,6 +16,10 @@ PROGRAMA PREX {
     letra = 'A';
     condicao = 1;
     numeros = + 1,0 2,0 3,0 4,0 5,0;
+    teste = 0,0;
+    teste1 = +0,0;
+    teste2 = -0,0;
+    teste3 = 876,543;
 
     \ Operações aritméticas \
     resultado = + x y;
@@ -47,7 +51,7 @@ PROGRAMA PREX {
     }
 
     \ Loop \
-    ENQUANTO > x 0 FAÇA {
+    ENQUANTO > x 0 FACA {
         ESCREVER x;
         x = - x 1,0;
     }

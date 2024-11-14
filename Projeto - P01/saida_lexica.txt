@@ -1,3 +1,5 @@
+==> Processando arquivo: Exemplo.prex
+
 Token: 27, Lexema: \ Este é um exemplo completo da linguagem PREX. Ele cobre todas as possibilidades. \
 Token: 1, Lexema: PROGRAMA
 Token: 2, Lexema: PREX
@@ -55,6 +57,23 @@ Token: 21, Lexema: 2,0
 Token: 21, Lexema: 3,0
 Token: 21, Lexema: 4,0
 Token: 21, Lexema: 5,0
+Token: 5, Lexema: ;
+Token: 20, Lexema: teste
+Token: 7, Lexema: =
+Token: 21, Lexema: 0,0
+Token: 5, Lexema: ;
+Token: 20, Lexema: teste1
+Token: 7, Lexema: =
+Erro léxico: número float inválido '+0,0'
+Token: 5, Lexema: ;
+Token: 20, Lexema: teste2
+Token: 7, Lexema: =
+Erro léxico: número float inválido '-0,0'
+Token: 5, Lexema: ;
+Token: 20, Lexema: teste3
+Token: 7, Lexema: =
+Token: 21, Lexema: 876,54
+Erro léxico: caractere não reconhecido '3'
 Token: 5, Lexema: ;
 Token: 27, Lexema: \ Operações aritméticas \
 Token: 20, Lexema: resultado
@@ -157,10 +176,7 @@ Token: 16, Lexema: ENQUANTO
 Token: 26, Lexema: >
 Token: 20, Lexema: x
 Erro léxico: caractere não reconhecido '0'
-Token: 20, Lexema: FA
-Erro léxico: caractere não reconhecido '�'
-Erro léxico: caractere não reconhecido '�'
-Token: 20, Lexema: A
+Token: 17, Lexema: FACA
 Token: 3, Lexema: {
 Token: 19, Lexema: ESCREVER
 Token: 20, Lexema: x
@@ -175,3 +191,6 @@ Token: 4, Lexema: }
 Token: 27, Lexema: \ Comentário no final do programa \
 Token: 27, Lexema: \ Fim do programa \
 Token: 4, Lexema: }
+
+==> Concluído o processamento do arquivo: Exemplo.prex
+

@@ -39,6 +39,8 @@
 
 %%
 
+\\[^\\]*\\          { printf("Token: %d, Lexema: %s\n", T_COMENTARIO, yytext); }
+
 "PROGRAMA"          { printf("Token: %d, Lexema: %s\n", T_PROGRAMA, yytext); }
 "PREX"              { printf("Token: %d, Lexema: %s\n", T_PREX, yytext); }
 "{"                 { printf("Token: %d, Lexema: %s\n", T_CHAVE_ABRE, yytext); }
@@ -61,44 +63,67 @@
 "("                 { printf("Token: %d, Lexema: %s\n", T_PARENTESE_ABRE, yytext); }
 ")"                 { printf("Token: %d, Lexema: %s\n", T_PARENTESE_FECHA, yytext); }
 
-[A-Za-z][A-Za-z0-9]{0,9} { printf("Token: %d, Lexema: %s\n", T_IDENTIFICADOR, yytext); }
+[A-Za-z][A-Za-z0-9]{0,9}                { printf("Token: %d, Lexema: %s\n", T_IDENTIFICADOR, yytext); }
 
-[-+]?[0-9]+,[0-9]{1,2}   { printf("Token: %d, Lexema: %s\n", T_NUMERO_FLOAT, yytext); }
+[-+]?[0-9]+,[0-9]{1,2}                  {
+                                            if (strcmp(yytext, "+0,0") == 0 || strcmp(yytext, "-0,0") == 0) {
+                                                printf("Erro léxico: número float inválido '%s'\n", yytext);
+                                            } else {
+                                                printf("Token: %d, Lexema: %s\n", T_NUMERO_FLOAT, yytext);
+                                            }
+                                        }
+                                        
+\'([A-Za-z0-9@_#+\-*/\.: ]|\\n)\'       { printf("Token: %d, Lexema: %s\n", T_CARACTERE, yytext); }
 
-'.'                      { printf("Token: %d, Lexema: %s\n", T_CARACTERE, yytext); }
+\"[^\"]*\"                              { printf("Token: %d, Lexema: %s\n", T_STRING, yytext); }
 
-\"[^\"]*\"               { printf("Token: %d, Lexema: %s\n", T_STRING, yytext); }
+[+\-*/]                                 { printf("Token: %d, Lexema: %s\n", T_OPERADOR_ARITMETICO, yytext); }
 
-[+\-*/]                  { printf("Token: %d, Lexema: %s\n", T_OPERADOR_ARITMETICO, yytext); }
+[\^|~]                                  { printf("Token: %d, Lexema: %s\n", T_OPERADOR_LOGICO, yytext); }
 
-[\^|~]                   { printf("Token: %d, Lexema: %s\n", T_OPERADOR_LOGICO, yytext); }
+[><]|==|~=                              { printf("Token: %d, Lexema: %s\n", T_OPERADOR_RELACIONAL, yytext); }
 
-[><]|==|~=               { printf("Token: %d, Lexema: %s\n", T_OPERADOR_RELACIONAL, yytext); }
+[ \t\n\r]+                              { /* Ignora espaços em branco */ }
 
-\\[^\\]*\\               { printf("Token: %d, Lexema: %s\n", T_COMENTARIO, yytext); }
-
-[ \t\n\r]+               { /* Ignora espaços em branco */ }
-
-.                        { printf("Erro léxico: caractere não reconhecido '%s'\n", yytext); }
+.                                       { printf("Erro léxico: caractere não reconhecido '%s'\n", yytext); }
 
 %%
 
-int main(int argc, char** argv) {
-    if (argc != 2) {
-        printf("Uso: %s exemplo1.prex\n", argv[0]);
-        return 1;
-    }
+#include <stdio.h>
+#include <stdlib.h>
 
-    FILE* arquivo = fopen(argv[1], "r");
+/* Função para processar um arquivo de entrada */
+void processarArquivo(const char* nomeArquivo) {
+    FILE* arquivo = fopen(nomeArquivo, "r");
     if (arquivo == NULL) {
-        printf("Erro ao abrir o arquivo %s\n", argv[1]);
-        return 1;
+        fprintf(stderr, "Erro: Não foi possível abrir o arquivo '%s'. Verifique se o arquivo existe e se você tem permissão para lê-lo.\n", nomeArquivo);
+        return;
     }
 
+    printf("==> Processando arquivo: %s\n\n", nomeArquivo);
+
+    /* Configura o arquivo como entrada do Flex */
     yyin = arquivo;
 
+    /* Executa o analisador léxico */
     yylex();
 
+    /* Fecha o arquivo após o processamento */
     fclose(arquivo);
-    return 0;
+
+    printf("\n==> Concluído o processamento do arquivo: %s\n\n", nomeArquivo);
+}
+
+int main(int argc, char** argv) {
+    if (argc < 2) {
+        fprintf(stderr, "Uso: %s <arquivo1.prex> [arquivo2.prex ...]\n", argv[0]);
+        fprintf(stderr, "Forneça pelo menos um arquivo de entrada.\n");
+        return EXIT_FAILURE;
+    }
+
+    for (int i = 1; i < argc; i++) {
+        processarArquivo(argv[i]);
+    }
+
+    return EXIT_SUCCESS;
 }
