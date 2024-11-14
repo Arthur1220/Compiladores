@@ -1,0 +1,62 @@
+Token: 27, Lexema: \ EXEMPLO DE CODIGO PREX
+   Objetivo: receber dois numeros, realizar a soma e exibir no video.
+   Entrada: dois numeros.
+  Saida: o resultado da soma destes dois numeros.
+ \
+Token: 1, Lexema: PROGRAMA
+Token: 2, Lexema: PREX
+Token: 3, Lexema: {
+Token: 8, Lexema: FLOAT
+Token: 20, Lexema: n1
+Token: 6, Lexema: ,
+Token: 20, Lexema: n2
+Token: 6, Lexema: ,
+Token: 20, Lexema: soma
+Token: 5, Lexema: ;
+Token: 10, Lexema: LISTA
+Token: 9, Lexema: CHAR
+Token: 20, Lexema: textoEntrada
+Token: 28, Lexema: (
+Erro léxico: caractere não reconhecido '2'
+Erro léxico: caractere não reconhecido '5'
+Token: 29, Lexema: )
+Token: 6, Lexema: ,
+Token: 20, Lexema: textoSaida
+Token: 28, Lexema: (
+Erro léxico: caractere não reconhecido '1'
+Erro léxico: caractere não reconhecido '0'
+Token: 29, Lexema: )
+Token: 5, Lexema: ;
+Token: 20, Lexema: textoEntrada
+Token: 7, Lexema: =
+Token: 23, Lexema: "Digite um numero real: \n"
+Token: 5, Lexema: ;
+Token: 20, Lexema: textoSaida
+Token: 7, Lexema: =
+Token: 23, Lexema: "A soma e: "
+Token: 5, Lexema: ;
+Token: 19, Lexema: ESCREVER
+Token: 20, Lexema: textoEntrada
+Token: 5, Lexema: ;
+Token: 18, Lexema: LER
+Token: 20, Lexema: n1
+Token: 5, Lexema: ;
+Token: 19, Lexema: ESCREVER
+Token: 20, Lexema: textoEntrada
+Token: 5, Lexema: ;
+Token: 18, Lexema: LER
+Token: 20, Lexema: n2
+Token: 5, Lexema: ;
+Token: 20, Lexema: soma
+Token: 7, Lexema: =
+Token: 24, Lexema: +
+Token: 20, Lexema: n1
+Token: 20, Lexema: n2
+Token: 5, Lexema: ;
+Token: 19, Lexema: ESCREVER
+Token: 20, Lexema: textoSaida
+Token: 5, Lexema: ;
+Token: 19, Lexema: ESCREVER
+Token: 20, Lexema: soma
+Token: 5, Lexema: ;
+Token: 4, Lexema: }
