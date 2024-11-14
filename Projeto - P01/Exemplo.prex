@@ -1,0 +1,57 @@
+\ Este é um exemplo completo da linguagem PREX. Ele cobre todas as possibilidades. \
+
+PROGRAMA PREX {
+    \ Declaração de constantes \
+    CONST FLOAT pi = 3,14;
+
+    \ Declaração de variáveis \
+    FLOAT x, y, resultado;
+    CHAR letra;
+    BOOL condicao;
+    LISTA FLOAT numeros(5);
+
+    \ Atribuições \
+    x = 10,5;
+    y = -2,3;
+    letra = 'A';
+    condicao = 1;
+    numeros = + 1,0 2,0 3,0 4,0 5,0;
+
+    \ Operações aritméticas \
+    resultado = + x y;
+    resultado = - x y;
+    resultado = * x y;
+    resultado = / x y;
+
+    \ Operações lógicas \
+    condicao = ^ 1 0;
+    condicao = | 0 1 1;
+    condicao = ~ 0;
+
+    \ Operações relacionais \
+    condicao = > x y;
+    condicao = < x y;
+    condicao = == x y;
+    condicao = ~= x y;
+
+    \ Entrada e saída \
+    ESCREVER "Digite um número: ";
+    LER x;
+    ESCREVER "O valor de x é: ", x;
+
+    \ Controle condicional \
+    SE condicao ENTAO {
+        ESCREVER "Condição verdadeira!";
+    } SENAO {
+        ESCREVER "Condição falsa!";
+    }
+
+    \ Loop \
+    ENQUANTO > x 0 FAÇA {
+        ESCREVER x;
+        x = - x 1,0;
+    }
+
+    \ Comentário no final do programa \
+    \ Fim do programa \
+}

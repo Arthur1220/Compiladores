@@ -61,7 +61,7 @@
 "("                 { printf("Token: %d, Lexema: %s\n", T_PARENTESE_ABRE, yytext); }
 ")"                 { printf("Token: %d, Lexema: %s\n", T_PARENTESE_FECHA, yytext); }
 
-[A-Za-z][A-Za-z0-9]+     { printf("Token: %d, Lexema: %s\n", T_IDENTIFICADOR, yytext); }
+[A-Za-z][A-Za-z0-9]{0,9} { printf("Token: %d, Lexema: %s\n", T_IDENTIFICADOR, yytext); }
 
 [-+]?[0-9]+,[0-9]{1,2}   { printf("Token: %d, Lexema: %s\n", T_NUMERO_FLOAT, yytext); }
 
@@ -73,7 +73,7 @@
 
 [\^|~]                   { printf("Token: %d, Lexema: %s\n", T_OPERADOR_LOGICO, yytext); }
 
-[><]=?|==|~=             { printf("Token: %d, Lexema: %s\n", T_OPERADOR_RELACIONAL, yytext); }
+[><]|==|~=               { printf("Token: %d, Lexema: %s\n", T_OPERADOR_RELACIONAL, yytext); }
 
 \\[^\\]*\\               { printf("Token: %d, Lexema: %s\n", T_COMENTARIO, yytext); }
 

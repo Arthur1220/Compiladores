@@ -4,6 +4,7 @@
   Saida: o resultado da soma destes dois numeros.
  \
 PROGRAMA PREX {
+	896,34;
 	FLOAT n1, n2, soma;
 	LISTA CHAR textoEntrada(25), textoSaida(10);
 	textoEntrada = "Digite um numero real: \n";
