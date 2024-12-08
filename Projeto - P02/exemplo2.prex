@@ -1,0 +1,15 @@
+\ Exemplo de expressoes aritmeticas aninhadas \
+PROGRAMA PREX {
+    FLOAT a, b, c, d, resultado;
+    
+    LER a;
+    LER b;
+    LER c;
+    LER d;
+    
+    resultado = + * a b * c d;
+    ESCREVER resultado;
+    
+    resultado = / + a b + c d;
+    ESCREVER resultado;
+}

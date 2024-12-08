@@ -1,0 +1,6 @@
+flex prex.l
+bison -d prex.y
+gcc lex.yy.c prex.tab.c -o parser
+
+./parser ./exemplo1.prex
+./parser ./exemplo2.prex

@@ -1,0 +1,21 @@
+\ Exemplo de codigo PREX
+   Objetivo: calcular media ponderada de duas notas
+   Entrada: duas notas e seus respectivos pesos
+   Saida: o resultado da media ponderada \
+PROGRAMA PREX {
+    FLOAT nota1, nota2, peso1, peso2, soma, divisor, media;
+    
+    LER nota1;
+    LER peso1;
+   
+    LER nota2 peso2;
+
+    soma = 0,5;
+    
+    soma = * nota1 peso1;
+    divisor = + peso1 peso2;
+    soma = + soma * nota2 peso2;
+    media = / soma divisor;
+    
+    ESCREVER media soma;
+}
