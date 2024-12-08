@@ -1,196 +1,73 @@
-==> Processando arquivo: Exemplo.prex
+==> Processando arquivo: Exemplo01.prex
 
-Token: 27, Lexema: \ Este é um exemplo completo da linguagem PREX. Ele cobre todas as possibilidades. \
-Token: 1, Lexema: PROGRAMA
-Token: 2, Lexema: PREX
-Token: 3, Lexema: {
-Token: 27, Lexema: \ Declaração de constantes \
-Token: 12, Lexema: CONST
-Token: 8, Lexema: FLOAT
-Token: 20, Lexema: pi
-Token: 7, Lexema: =
-Token: 21, Lexema: 3,14
-Token: 5, Lexema: ;
-Token: 27, Lexema: \ Declaração de variáveis \
-Token: 8, Lexema: FLOAT
-Token: 20, Lexema: x
-Token: 6, Lexema: ,
-Token: 20, Lexema: y
-Token: 6, Lexema: ,
-Token: 20, Lexema: resultado
-Token: 5, Lexema: ;
-Token: 9, Lexema: CHAR
-Token: 20, Lexema: letra
-Token: 5, Lexema: ;
-Token: 11, Lexema: BOOL
-Token: 20, Lexema: condicao
-Token: 5, Lexema: ;
-Token: 10, Lexema: LISTA
-Token: 8, Lexema: FLOAT
-Token: 20, Lexema: numeros
-Token: 28, Lexema: (
+Token: 27 (T_COMENTARIO), Lexema: \ EXEMPLO DE CODIGO PREX
+   Objetivo: receber dois numeros, realizar a soma e exibir no video.
+   Entrada: dois numeros.
+  Saida: o resultado da soma destes dois numeros.
+ \
+Token: 1 (T_PROGRAMA), Lexema: PROGRAMA
+Token: 2 (T_PREX), Lexema: PREX
+Token: 3 (T_CHAVE_ABRE), Lexema: {
+Token: 21 (T_NUMERO_FLOAT), Lexema: 896,34
+Token: 5 (T_PONTO_VIRGULA), Lexema: ;
+Token: 8 (T_FLOAT), Lexema: FLOAT
+Token: 20 (T_IDENTIFICADOR), Lexema: n1
+Token: 6 (T_VIRGULA), Lexema: ,
+Token: 20 (T_IDENTIFICADOR), Lexema: n2
+Token: 6 (T_VIRGULA), Lexema: ,
+Token: 20 (T_IDENTIFICADOR), Lexema: soma
+Token: 5 (T_PONTO_VIRGULA), Lexema: ;
+Token: 10 (T_LISTA), Lexema: LISTA
+Token: 9 (T_CHAR), Lexema: CHAR
+Token: 20 (T_IDENTIFICADOR), Lexema: textoEntra
+Token: 20 (T_IDENTIFICADOR), Lexema: da
+Token: 28 (T_PARENTESE_ABRE), Lexema: (
+Erro léxico: caractere não reconhecido '2'
 Erro léxico: caractere não reconhecido '5'
-Token: 29, Lexema: )
-Token: 5, Lexema: ;
-Token: 27, Lexema: \ Atribuições \
-Token: 20, Lexema: x
-Token: 7, Lexema: =
-Token: 21, Lexema: 10,5
-Token: 5, Lexema: ;
-Token: 20, Lexema: y
-Token: 7, Lexema: =
-Token: 21, Lexema: -2,3
-Token: 5, Lexema: ;
-Token: 20, Lexema: letra
-Token: 7, Lexema: =
-Token: 22, Lexema: 'A'
-Token: 5, Lexema: ;
-Token: 20, Lexema: condicao
-Token: 7, Lexema: =
-Erro léxico: caractere não reconhecido '1'
-Token: 5, Lexema: ;
-Token: 20, Lexema: numeros
-Token: 7, Lexema: =
-Token: 24, Lexema: +
-Token: 21, Lexema: 1,0
-Token: 21, Lexema: 2,0
-Token: 21, Lexema: 3,0
-Token: 21, Lexema: 4,0
-Token: 21, Lexema: 5,0
-Token: 5, Lexema: ;
-Token: 20, Lexema: teste
-Token: 7, Lexema: =
-Token: 21, Lexema: 0,0
-Token: 5, Lexema: ;
-Token: 20, Lexema: teste1
-Token: 7, Lexema: =
-Erro léxico: número float inválido '+0,0'
-Token: 5, Lexema: ;
-Token: 20, Lexema: teste2
-Token: 7, Lexema: =
-Erro léxico: número float inválido '-0,0'
-Token: 5, Lexema: ;
-Token: 20, Lexema: teste3
-Token: 7, Lexema: =
-Token: 21, Lexema: 876,54
-Erro léxico: caractere não reconhecido '3'
-Token: 5, Lexema: ;
-Token: 27, Lexema: \ Operações aritméticas \
-Token: 20, Lexema: resultado
-Token: 7, Lexema: =
-Token: 24, Lexema: +
-Token: 20, Lexema: x
-Token: 20, Lexema: y
-Token: 5, Lexema: ;
-Token: 20, Lexema: resultado
-Token: 7, Lexema: =
-Token: 24, Lexema: -
-Token: 20, Lexema: x
-Token: 20, Lexema: y
-Token: 5, Lexema: ;
-Token: 20, Lexema: resultado
-Token: 7, Lexema: =
-Token: 24, Lexema: *
-Token: 20, Lexema: x
-Token: 20, Lexema: y
-Token: 5, Lexema: ;
-Token: 20, Lexema: resultado
-Token: 7, Lexema: =
-Token: 24, Lexema: /
-Token: 20, Lexema: x
-Token: 20, Lexema: y
-Token: 5, Lexema: ;
-Token: 27, Lexema: \ Operações lógicas \
-Token: 20, Lexema: condicao
-Token: 7, Lexema: =
-Token: 25, Lexema: ^
+Token: 29 (T_PARENTESE_FECHA), Lexema: )
+Token: 6 (T_VIRGULA), Lexema: ,
+Token: 20 (T_IDENTIFICADOR), Lexema: textoSaida
+Token: 28 (T_PARENTESE_ABRE), Lexema: (
 Erro léxico: caractere não reconhecido '1'
 Erro léxico: caractere não reconhecido '0'
-Token: 5, Lexema: ;
-Token: 20, Lexema: condicao
-Token: 7, Lexema: =
-Token: 25, Lexema: |
-Erro léxico: caractere não reconhecido '0'
-Erro léxico: caractere não reconhecido '1'
-Erro léxico: caractere não reconhecido '1'
-Token: 5, Lexema: ;
-Token: 20, Lexema: condicao
-Token: 7, Lexema: =
-Token: 25, Lexema: ~
-Erro léxico: caractere não reconhecido '0'
-Token: 5, Lexema: ;
-Token: 27, Lexema: \ Operações relacionais \
-Token: 20, Lexema: condicao
-Token: 7, Lexema: =
-Token: 26, Lexema: >
-Token: 20, Lexema: x
-Token: 20, Lexema: y
-Token: 5, Lexema: ;
-Token: 20, Lexema: condicao
-Token: 7, Lexema: =
-Token: 26, Lexema: <
-Token: 20, Lexema: x
-Token: 20, Lexema: y
-Token: 5, Lexema: ;
-Token: 20, Lexema: condicao
-Token: 7, Lexema: =
-Token: 26, Lexema: ==
-Token: 20, Lexema: x
-Token: 20, Lexema: y
-Token: 5, Lexema: ;
-Token: 20, Lexema: condicao
-Token: 7, Lexema: =
-Token: 26, Lexema: ~=
-Token: 20, Lexema: x
-Token: 20, Lexema: y
-Token: 5, Lexema: ;
-Token: 27, Lexema: \ Entrada e saída \
-Token: 19, Lexema: ESCREVER
-Token: 23, Lexema: "Digite um número: "
-Token: 5, Lexema: ;
-Token: 18, Lexema: LER
-Token: 20, Lexema: x
-Token: 5, Lexema: ;
-Token: 19, Lexema: ESCREVER
-Token: 23, Lexema: "O valor de x é: "
-Token: 6, Lexema: ,
-Token: 20, Lexema: x
-Token: 5, Lexema: ;
-Token: 27, Lexema: \ Controle condicional \
-Token: 13, Lexema: SE
-Token: 20, Lexema: condicao
-Token: 14, Lexema: ENTAO
-Token: 3, Lexema: {
-Token: 19, Lexema: ESCREVER
-Token: 23, Lexema: "Condição verdadeira!"
-Token: 5, Lexema: ;
-Token: 4, Lexema: }
-Token: 15, Lexema: SENAO
-Token: 3, Lexema: {
-Token: 19, Lexema: ESCREVER
-Token: 23, Lexema: "Condição falsa!"
-Token: 5, Lexema: ;
-Token: 4, Lexema: }
-Token: 27, Lexema: \ Loop \
-Token: 16, Lexema: ENQUANTO
-Token: 26, Lexema: >
-Token: 20, Lexema: x
-Erro léxico: caractere não reconhecido '0'
-Token: 17, Lexema: FACA
-Token: 3, Lexema: {
-Token: 19, Lexema: ESCREVER
-Token: 20, Lexema: x
-Token: 5, Lexema: ;
-Token: 20, Lexema: x
-Token: 7, Lexema: =
-Token: 24, Lexema: -
-Token: 20, Lexema: x
-Token: 21, Lexema: 1,0
-Token: 5, Lexema: ;
-Token: 4, Lexema: }
-Token: 27, Lexema: \ Comentário no final do programa \
-Token: 27, Lexema: \ Fim do programa \
-Token: 4, Lexema: }
+Token: 29 (T_PARENTESE_FECHA), Lexema: )
+Token: 5 (T_PONTO_VIRGULA), Lexema: ;
+Token: 20 (T_IDENTIFICADOR), Lexema: textoEntra
+Token: 20 (T_IDENTIFICADOR), Lexema: da
+Token: 7 (T_IGUAL), Lexema: =
+Token: 23 (T_STRING), Lexema: "Digite um numero real: \n"
+Token: 5 (T_PONTO_VIRGULA), Lexema: ;
+Token: 20 (T_IDENTIFICADOR), Lexema: textoSaida
+Token: 7 (T_IGUAL), Lexema: =
+Token: 23 (T_STRING), Lexema: "A soma e: "
+Token: 5 (T_PONTO_VIRGULA), Lexema: ;
+Token: 19 (T_ESCREVER), Lexema: ESCREVER
+Token: 20 (T_IDENTIFICADOR), Lexema: textoEntra
+Token: 20 (T_IDENTIFICADOR), Lexema: da
+Token: 5 (T_PONTO_VIRGULA), Lexema: ;
+Token: 18 (T_LER), Lexema: LER
+Token: 20 (T_IDENTIFICADOR), Lexema: n1
+Token: 5 (T_PONTO_VIRGULA), Lexema: ;
+Token: 19 (T_ESCREVER), Lexema: ESCREVER
+Token: 20 (T_IDENTIFICADOR), Lexema: textoEntra
+Token: 20 (T_IDENTIFICADOR), Lexema: da
+Token: 5 (T_PONTO_VIRGULA), Lexema: ;
+Token: 18 (T_LER), Lexema: LER
+Token: 20 (T_IDENTIFICADOR), Lexema: n2
+Token: 5 (T_PONTO_VIRGULA), Lexema: ;
+Token: 20 (T_IDENTIFICADOR), Lexema: soma
+Token: 7 (T_IGUAL), Lexema: =
+Token: 24 (T_OPERADOR_ARITMETICO), Lexema: +
+Token: 20 (T_IDENTIFICADOR), Lexema: n1
+Token: 20 (T_IDENTIFICADOR), Lexema: n2
+Token: 5 (T_PONTO_VIRGULA), Lexema: ;
+Token: 19 (T_ESCREVER), Lexema: ESCREVER
+Token: 20 (T_IDENTIFICADOR), Lexema: textoSaida
+Token: 5 (T_PONTO_VIRGULA), Lexema: ;
+Token: 19 (T_ESCREVER), Lexema: ESCREVER
+Token: 20 (T_IDENTIFICADOR), Lexema: soma
+Token: 5 (T_PONTO_VIRGULA), Lexema: ;
+Token: 4 (T_CHAVE_FECHA), Lexema: }
 
-==> Concluído o processamento do arquivo: Exemplo.prex
+==> Concluído o processamento do arquivo: Exemplo01.prex
 

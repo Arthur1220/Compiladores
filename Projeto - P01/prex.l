@@ -39,49 +39,49 @@
 
 %%
 
-\\[^\\]*\\          { printf("Token: %d, Lexema: %s\n", T_COMENTARIO, yytext); }
+\\[^\\]*\\          { printf("Token: %d (T_COMENTARIO), Lexema: %s\n", T_COMENTARIO, yytext); }
 
-"PROGRAMA"          { printf("Token: %d, Lexema: %s\n", T_PROGRAMA, yytext); }
-"PREX"              { printf("Token: %d, Lexema: %s\n", T_PREX, yytext); }
-"{"                 { printf("Token: %d, Lexema: %s\n", T_CHAVE_ABRE, yytext); }
-"}"                 { printf("Token: %d, Lexema: %s\n", T_CHAVE_FECHA, yytext); }
-";"                 { printf("Token: %d, Lexema: %s\n", T_PONTO_VIRGULA, yytext); }
-","                 { printf("Token: %d, Lexema: %s\n", T_VIRGULA, yytext); }
-"="                 { printf("Token: %d, Lexema: %s\n", T_IGUAL, yytext); }
-"FLOAT"             { printf("Token: %d, Lexema: %s\n", T_FLOAT, yytext); }
-"CHAR"              { printf("Token: %d, Lexema: %s\n", T_CHAR, yytext); }
-"LISTA"             { printf("Token: %d, Lexema: %s\n", T_LISTA, yytext); }
-"BOOL"              { printf("Token: %d, Lexema: %s\n", T_BOOL, yytext); }
-"CONST"             { printf("Token: %d, Lexema: %s\n", T_CONST, yytext); }
-"SE"                { printf("Token: %d, Lexema: %s\n", T_SE, yytext); }
-"ENTAO"             { printf("Token: %d, Lexema: %s\n", T_ENTAO, yytext); }
-"SENAO"             { printf("Token: %d, Lexema: %s\n", T_SENAO, yytext); }
-"ENQUANTO"          { printf("Token: %d, Lexema: %s\n", T_ENQUANTO, yytext); }
-"FACA"              { printf("Token: %d, Lexema: %s\n", T_FACA, yytext); }
-"LER"               { printf("Token: %d, Lexema: %s\n", T_LER, yytext); }
-"ESCREVER"          { printf("Token: %d, Lexema: %s\n", T_ESCREVER, yytext); }
-"("                 { printf("Token: %d, Lexema: %s\n", T_PARENTESE_ABRE, yytext); }
-")"                 { printf("Token: %d, Lexema: %s\n", T_PARENTESE_FECHA, yytext); }
+"PROGRAMA"          { printf("Token: %d (T_PROGRAMA), Lexema: %s\n", T_PROGRAMA, yytext); }
+"PREX"              { printf("Token: %d (T_PREX), Lexema: %s\n", T_PREX, yytext); }
+"{"                 { printf("Token: %d (T_CHAVE_ABRE), Lexema: %s\n", T_CHAVE_ABRE, yytext); }
+"}"                 { printf("Token: %d (T_CHAVE_FECHA), Lexema: %s\n", T_CHAVE_FECHA, yytext); }
+";"                 { printf("Token: %d (T_PONTO_VIRGULA), Lexema: %s\n", T_PONTO_VIRGULA, yytext); }
+","                 { printf("Token: %d (T_VIRGULA), Lexema: %s\n", T_VIRGULA, yytext); }
+"="                 { printf("Token: %d (T_IGUAL), Lexema: %s\n", T_IGUAL, yytext); }
+"FLOAT"             { printf("Token: %d (T_FLOAT), Lexema: %s\n", T_FLOAT, yytext); }
+"CHAR"              { printf("Token: %d (T_CHAR), Lexema: %s\n", T_CHAR, yytext); }
+"LISTA"             { printf("Token: %d (T_LISTA), Lexema: %s\n", T_LISTA, yytext); }
+"BOOL"              { printf("Token: %d (T_BOOL), Lexema: %s\n", T_BOOL, yytext); }
+"CONST"             { printf("Token: %d (T_CONST), Lexema: %s\n", T_CONST, yytext); }
+"SE"                { printf("Token: %d (T_SE), Lexema: %s\n", T_SE, yytext); }
+"ENTAO"             { printf("Token: %d (T_ENTAO), Lexema: %s\n", T_ENTAO, yytext); }
+"SENAO"             { printf("Token: %d (T_SENAO), Lexema: %s\n", T_SENAO, yytext); }
+"ENQUANTO"          { printf("Token: %d (T_ENQUANTO), Lexema: %s\n", T_ENQUANTO, yytext); }
+"FACA"              { printf("Token: %d (T_FACA), Lexema: %s\n", T_FACA, yytext); }
+"LER"               { printf("Token: %d (T_LER), Lexema: %s\n", T_LER, yytext); }
+"ESCREVER"          { printf("Token: %d (T_ESCREVER), Lexema: %s\n", T_ESCREVER, yytext); }
+"("                 { printf("Token: %d (T_PARENTESE_ABRE), Lexema: %s\n", T_PARENTESE_ABRE, yytext); }
+")"                 { printf("Token: %d (T_PARENTESE_FECHA), Lexema: %s\n", T_PARENTESE_FECHA, yytext); }
 
-[A-Za-z][A-Za-z0-9]{0,9}                { printf("Token: %d, Lexema: %s\n", T_IDENTIFICADOR, yytext); }
+[A-Za-z][A-Za-z0-9]{0,9}                { printf("Token: %d (T_IDENTIFICADOR), Lexema: %s\n", T_IDENTIFICADOR, yytext); }
 
 [-+]?[0-9]+,[0-9]{1,2}                  {
                                             if (strcmp(yytext, "+0,0") == 0 || strcmp(yytext, "-0,0") == 0) {
                                                 printf("Erro léxico: número float inválido '%s'\n", yytext);
                                             } else {
-                                                printf("Token: %d, Lexema: %s\n", T_NUMERO_FLOAT, yytext);
+                                                printf("Token: %d (T_NUMERO_FLOAT), Lexema: %s\n", T_NUMERO_FLOAT, yytext);
                                             }
                                         }
                                         
-\'([A-Za-z0-9@_#+\-*/\.: ]|\\n)\'       { printf("Token: %d, Lexema: %s\n", T_CARACTERE, yytext); }
+\'([A-Za-z0-9@_#+\-*/\.: ]|\\n)\'       { printf("Token: %d (T_CARACTERE), Lexema: %s\n", T_CARACTERE, yytext); }
 
-\"[^\"]*\"                              { printf("Token: %d, Lexema: %s\n", T_STRING, yytext); }
+\"[^\"]*\"                              { printf("Token: %d (T_STRING), Lexema: %s\n", T_STRING, yytext); }
 
-[+\-*/]                                 { printf("Token: %d, Lexema: %s\n", T_OPERADOR_ARITMETICO, yytext); }
+[+\-*/]                                 { printf("Token: %d (T_OPERADOR_ARITMETICO), Lexema: %s\n", T_OPERADOR_ARITMETICO, yytext); }
 
-[\^|~]                                  { printf("Token: %d, Lexema: %s\n", T_OPERADOR_LOGICO, yytext); }
+[\^|~]                                  { printf("Token: %d (T_OPERADOR_LOGICO), Lexema: %s\n", T_OPERADOR_LOGICO, yytext); }
 
-[><]|==|~=                              { printf("Token: %d, Lexema: %s\n", T_OPERADOR_RELACIONAL, yytext); }
+[><]|==|~=                              { printf("Token: %d (T_OPERADOR_RELACIONAL), Lexema: %s\n", T_OPERADOR_RELACIONAL, yytext); }
 
 [ \t\n\r]+                              { /* Ignora espaços em branco */ }
 
