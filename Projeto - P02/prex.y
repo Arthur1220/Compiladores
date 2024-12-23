@@ -122,7 +122,7 @@ comando_leitura:
         char buffer[1000] = "";
         char *token = strtok($2, " ");
         while(token != NULL) {
-            strcat(buffer, "    scanf(\"%%f\", &");
+            strcat(buffer, "    scanf(\"%f\", &");
             strcat(buffer, token);
             strcat(buffer, ");\n");
             token = strtok(NULL, " ");
@@ -137,7 +137,7 @@ comando_escrita:
         char buffer[1000] = "";
         char *token = strtok($2, " ");
         while(token != NULL) {
-            strcat(buffer, "    printf(\"%%f\\n\", ");
+            strcat(buffer, "    printf(\"%f\\n\", ");
             strcat(buffer, token);
             strcat(buffer, ");\n");
             token = strtok(NULL, " ");
